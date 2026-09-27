@@ -2141,8 +2141,14 @@
                     .join('\n');
                 if (termsList) {
                     parts.push(
-                        `PROTECTED TERMS (DO NOT MODIFY):\nThe following terms, names, and version numbers are verified correct entities. You MUST keep them exactly as written and NEVER change, autocorrect, rephrase, or substitute them:\n${termsList}`
-                    );
+    `PROTECTED TERMS (DO NOT ALTER IF PRESENT):\n` +
+    `The following is a reference list of preserved terms:\n${termsList}\n\n` +
+    `CRITICAL RULES FOR PROTECTED TERMS:\n` +
+    `1. ONLY apply this rule IF a term already appears in the user's input text.\n` +
+    `2. If a listed term is present in the input, preserve its exact spelling and casing.\n` +
+    `3. NEVER add, introduce, or hallucinate these terms into the output if they are not already in the input text.`
+);
+
                 }
             }
 
