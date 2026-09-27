@@ -10,27 +10,37 @@
   [![Demo](https://img.shields.io/badge/Live-Demo-3b82f6?style=for-the-badge)](https://mahdialaaaldin.github.io/verbatim/)
 
   <p align="center">
-    <strong>Verbatim Studio</strong> is a state-of-the-art, client-side web editor engineered for lightning-fast text revisions, tone adjustments, grammar optimization, and AI prompting. Designed with mobile-first responsiveness, it serves as a robust writing assistant that runs completely in your browser.
+    <strong>Verbatim Studio</strong> is a state-of-the-art, client-side web editor engineered for lightning-fast text revisions, tone adjustments, grammar optimization, and AI prompting. Designed with mobile-first responsiveness, it serves as a robust writing assistant that runs completely in your browser, based on the <a href="https://chromewebstore.google.com/detail/codesavvy/jenendhnlcnokliclhccikgeohdgfhml"><strong>CodeSavvy Chrome Extension</strong></a>.
   </p>
 </div>
 
 ---
 
-## 🚀 Live Access & Repository
+## 🚀 Live Access, Extension & Repository
 
 * 🌐 **Live Studio:** [mahdialaaaldin.github.io/verbatim](https://mahdialaaaldin.github.io/verbatim/)
+* 🧩 **Chrome Extension:** [CodeSavvy on Chrome Web Store](https://chromewebstore.google.com/detail/codesavvy/jenendhnlcnokliclhccikgeohdgfhml)
 * 📦 **GitHub Repository:** [github.com/mahdialaaaldin/verbatim](https://github.com/mahdialaaaldin/verbatim)
 
 ---
 
 ## ✨ Features at a Glance
 
-### 🧠 Advanced AI Support
-Powered by **Google Gemini AI** (via Gemini API) for high-speed logic, tone adjustment, and premium content generation.
+### 🧠 Advanced AI & Personalization Guardrails
+Powered by **Google Gemini AI** (via Gemini API) with robust guardrails:
+* 🔒 **Protected Terms Dictionary**: Blacklist critical brand names, code parameters, or version tags that Gemini is strictly forbidden from altering, translating, or hallucinating over.
+* ✍️ **Custom System Instructions**: Inject persistent global directives (e.g., British vs. American English, concise bullets, domain-specific rules) into all AI operations.
+* ⭐ **Customizable Favorite Action (`★`)**: Designate any built-in system prompt as your favorite using the star button in Settings to automatically pin it at the very beginning of your workspace carousel.
 
-### 🎭 Tone Presets
-Instant transformations with tailor-made system prompt structures:
+### ⚡ Instant Offline Utilities & Keyboard Fixer (0ms • No Key Needed)
+Perform instant client-side transforms completely offline (can be toggled on/off in Settings or dismissed directly via the toolbar `✕` button):
+* 🔤 **Case Converters**: Sentence case, lower case, UPPER CASE, Capitalized Case, Title Case, `slug-format`, `aLtErNaTiNg`, and `iNVERSE`.
+* 🌐 **Arabic ⇄ English Keyboard Layout Fixer**: Instantly recover text typed with the wrong keyboard layout (e.g., `ؤاشف` ⇄ `chat`, `login` ⇄ `مخلهى`).
+
+### 🎭 Tone Presets & Built-in System Prompts
+Instant transformations with tailor-made prompt structures:
 * ✨ **Correct & Polish (`improve`)**: Fix grammar, flow, and phrasing.
+* 🖋️ **Advanced Edit (`advanced-improve`)**: Comprehensive vocabulary, syntax, and flow overhaul.
 * 💼 **Professional (`professional`)**: Formalize text for corporate, research, or email correspondence.
 * 💬 **Conversational (`casual`)**: Turn dry drafts into friendly, approachable messages.
 * 🗜️ **Summarize (`summarize`)**: Compress long paragraphs into core takeaways.
@@ -38,12 +48,14 @@ Instant transformations with tailor-made system prompt structures:
 * 📐 **Expand (`expand`)**: Elaborate on brief points to write complete ideas.
 * 🎭 **Sarcastic (`sarcastic`)**: Rewrite text with dry humor and wit.
 * 🤖 **Prompt Architect (`prompt`)**: Turn basic ideas into optimized LLM system prompts.
+* 🎛️ **Granular Prompt Control**: Enable or disable individual system prompts in Settings (or leave just a single one enabled). The designated Favorite Action (`★`) is always pinned at the beginning of the carousel and protected from deactivation.
 
 ### 🎨 Visual & UI Excellence
 * 🌓 **Adaptive Dark Mode**: Switch between a clean slate interface and a dark space aura.
 * 🔍 **Real-Time Diff Viewer**: Interactively compare original and AI-modified texts with clear word-level insertions and deletions.
 * 🎙️ **Text-to-Speech Output**: Read back rewritten text using native browser-based speech synthesis audio controls.
-* 📜 **Revision History Ledger**: Automatically save previous transformations. Restore, copy, or delete drafts in one click.
+* 📜 **Revision History Ledger**: Automatically save previous transformations with custom auto-delete retention and Incognito mode. Restore, copy, or delete drafts in one click.
+* 💾 **Settings Backup & Portability**: Export preferences and custom presets to JSON, restore backups, or reset to factory defaults.
 * 📱 **PWA & Mobile Optimization**: Configured as an iOS Web App with custom apple-touch icons and status-bar colors for a native app feel when added to the home screen.
 
 ---

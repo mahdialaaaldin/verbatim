@@ -158,6 +158,13 @@
             </div>
 
             <div class="flex items-center gap-2">
+                <!-- CodeSavvy Chrome Extension Link -->
+                <a href="https://chromewebstore.google.com/detail/codesavvy/jenendhnlcnokliclhccikgeohdgfhml" target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-500/10 dark:hover:bg-indigo-500/20 border border-indigo-200/80 dark:border-indigo-500/30 rounded-xl transition"
+                    title="Get CodeSavvy on Chrome Web Store">
+                    <i class="fa-brands fa-chrome text-xs"></i>
+                    <span>CodeSavvy</span>
+                </a>
                 <!-- Theme Switcher -->
                 <button id="themeToggleBtn" onclick="toggleTheme()"
                     class="text-slate-500 hover:text-slate-800 bg-slate-100 border border-slate-200 hover:bg-slate-200 dark:text-slate-400 dark:hover:text-slate-200 dark:bg-slate-800/40 dark:border-slate-800 dark:hover:border-slate-700 dark:hover:bg-slate-800 transition p-2.5 rounded-xl"
@@ -218,6 +225,67 @@
             </div>
         </section>
 
+        <!-- Quick Offline Text Utilities & Keyboard Fixer Bar (CodeSavvy Powered) -->
+        <section id="offlineUtilitiesSection" class="w-full">
+            <div class="flex items-center justify-between mb-1.5 px-1">
+                <p class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 tracking-wider flex items-center gap-1.5">
+                    <i class="fa-solid fa-bolt text-amber-500"></i> Instant Offline Utilities &amp; Keyboard Fixer
+                </p>
+                <div class="flex items-center gap-2">
+                    <span class="text-[9px] text-emerald-600 dark:text-emerald-400 font-semibold bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-500/20">
+                        ⚡ 0ms • No API Key Needed
+                    </span>
+                    <button type="button" onclick="toggleOfflineUtilities(false, true)" title="Hide Offline Utilities toolbar (can be re-enabled in Settings)"
+                        class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs px-1.5 py-0.5 rounded hover:bg-slate-200 dark:hover:bg-slate-800 transition" aria-label="Close offline utilities">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex overflow-x-auto gap-1.5 py-1 -mx-1 px-1 scrollbar-none select-none items-center">
+                <button onclick="applyLocalTransform('sentenceCase')" type="button" title="Capitalize only first letter of sentences"
+                    class="flex-shrink-0 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-200/80 dark:border-slate-800 transition active:scale-95">
+                    Sentence case
+                </button>
+                <button onclick="applyLocalTransform('lowerCase')" type="button" title="Convert all characters to lowercase"
+                    class="flex-shrink-0 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-200/80 dark:border-slate-800 transition active:scale-95">
+                    lower case
+                </button>
+                <button onclick="applyLocalTransform('upperCase')" type="button" title="Convert all characters to UPPERCASE"
+                    class="flex-shrink-0 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-200/80 dark:border-slate-800 transition active:scale-95">
+                    UPPER CASE
+                </button>
+                <button onclick="applyLocalTransform('capitalizedCase')" type="button" title="Capitalize First Letter Of Each Word"
+                    class="flex-shrink-0 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-200/80 dark:border-slate-800 transition active:scale-95">
+                    Capitalized Case
+                </button>
+                <button onclick="applyLocalTransform('titleCase')" type="button" title="Format as Title Case (preserves small words)"
+                    class="flex-shrink-0 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-200/80 dark:border-slate-800 transition active:scale-95">
+                    Title Case
+                </button>
+                <button onclick="applyLocalTransform('slugify')" type="button" title="Convert to url-friendly-slug-format"
+                    class="flex-shrink-0 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-200/80 dark:border-slate-800 transition active:scale-95">
+                    slug-format
+                </button>
+                <button onclick="applyLocalTransform('alternatingCase')" type="button" title="aLtErNaTiNg cAsE"
+                    class="flex-shrink-0 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-200/80 dark:border-slate-800 transition active:scale-95">
+                    aLtErNaTiNg
+                </button>
+                <button onclick="applyLocalTransform('inverseCase')" type="button" title="iNVERSE cASE"
+                    class="flex-shrink-0 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/60 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-200/80 dark:border-slate-800 transition active:scale-95">
+                    iNVERSE
+                </button>
+                <span class="text-slate-300 dark:text-slate-700 px-0.5">|</span>
+                <button onclick="applyKeyboardFix('ar-to-en')" type="button" title="Fix text typed in Arabic layout when English was intended (e.g. ؤاشف -> chat)"
+                    class="flex-shrink-0 px-3 py-1.5 bg-amber-50 hover:bg-amber-100 dark:bg-amber-500/10 dark:hover:bg-amber-500/20 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold border border-amber-200 dark:border-amber-500/30 transition active:scale-95 flex items-center gap-1.5">
+                    <i class="fa-solid fa-language text-amber-600 dark:text-amber-400"></i> ع → En
+                </button>
+                <button onclick="applyKeyboardFix('en-to-ar')" type="button" title="Fix text typed in English layout when Arabic was intended (e.g. login -> مخلهى)"
+                    class="flex-shrink-0 px-3 py-1.5 bg-amber-50 hover:bg-amber-100 dark:bg-amber-500/10 dark:hover:bg-amber-500/20 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold border border-amber-200 dark:border-amber-500/30 transition active:scale-95 flex items-center gap-1.5">
+                    <i class="fa-solid fa-language text-amber-600 dark:text-amber-400"></i> En → ع
+                </button>
+            </div>
+        </section>
+
         <!-- Mobile Sliding Tab Bar -->
         <div
             class="md:hidden bg-slate-200/80 dark:bg-slate-950/80 p-1 rounded-xl border border-slate-300/60 dark:border-slate-800/60 max-w-[280px] w-full mx-auto relative mb-1">
@@ -264,11 +332,16 @@
                 </div>
                 <!-- Input Footer -->
                 <div
-                    class="flex justify-between items-center px-4 py-3 border-t border-slate-200 dark:border-slate-800/60 bg-slate-50/50 dark:bg-slate-950/30 text-xs text-slate-400 dark:text-slate-500 transition-colors duration-200">
-                    <div class="flex gap-3">
+                    class="flex flex-wrap justify-between items-center px-4 py-3 border-t border-slate-200 dark:border-slate-800/60 bg-slate-50/50 dark:bg-slate-950/30 text-xs text-slate-400 dark:text-slate-500 transition-colors duration-200 gap-2">
+                    <div class="flex gap-3 items-center">
                         <span id="charCount" class="font-medium text-slate-500 dark:text-slate-400">0 chars</span>
                         <span class="text-slate-300 dark:text-slate-700">•</span>
                         <span id="wordCount" class="font-medium text-slate-500 dark:text-slate-400">0 words</span>
+                    </div>
+                    <div class="hidden sm:flex items-center gap-1.5 text-[11px] text-slate-400 dark:text-slate-500">
+                        <i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+                        <span>Favorite:</span>
+                        <span id="favoriteActionLabel" class="text-indigo-600 dark:text-indigo-400 font-semibold cursor-pointer hover:underline" onclick="triggerAI(getFavoriteAction())" title="Click to run favorite action">Correct &amp; Polish ★</span>
                     </div>
                     <button onclick="clearText()"
                         class="text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-500/10 px-2.5 py-1.5 rounded-lg transition flex items-center gap-1">
@@ -490,6 +563,87 @@
 
                 <hr class="border-slate-200 dark:border-slate-800/80">
 
+                <!-- AI Personalization & Guardrails Section (Latest from CodeSavvy) -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-between items-center">
+                        <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 flex items-center gap-1.5">
+                            <i class="fa-solid fa-shield-halved"></i> AI Personalization &amp; Guardrails
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-slate-400 dark:text-slate-500">
+                        Protect critical terms and brand names from being altered, customize system-level instructions, and assign your default favorite action.
+                    </p>
+
+                    <!-- Protected Terms Dictionary -->
+                    <div class="p-3.5 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl flex flex-col gap-3">
+                        <div class="flex justify-between items-center">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" id="enableProtectedTerms" checked class="rounded text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-lock text-indigo-500 text-[10px]"></i> Protected Terms Dictionary
+                                </span>
+                            </label>
+                            <button type="button" onclick="clearProtectedTerms()" class="text-[10px] text-rose-500 hover:text-rose-600 hover:underline">
+                                Clear All
+                            </button>
+                        </div>
+                        <p class="text-[10px] text-slate-400 dark:text-slate-500">
+                            Terms, names, and parameters Gemini is strictly forbidden from altering or translating.
+                        </p>
+                        <div class="flex gap-2">
+                            <input id="newProtectedTermInput" type="text"
+                                class="flex-grow bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 rounded-lg py-1.5 px-3 leading-tight focus:outline-none focus:border-indigo-500 transition text-xs font-medium"
+                                placeholder="e.g. CodeSavvy, Verbatim, SuperRocket (press Enter)">
+                            <button type="button" onclick="addProtectedTerm()"
+                                class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs rounded-lg transition shadow-sm active:scale-95 flex items-center gap-1">
+                                <i class="fa-solid fa-plus text-[9px]"></i> Add
+                            </button>
+                        </div>
+                        <div id="protectedTermsChips" class="flex flex-wrap gap-1.5 min-h-[30px] max-h-32 overflow-y-auto p-1.5 bg-white/50 dark:bg-slate-950/40 rounded-lg border border-slate-200/60 dark:border-slate-800/60">
+                            <!-- Rendered dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Custom System Instructions -->
+                    <div class="p-3.5 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl flex flex-col gap-3">
+                        <div class="flex justify-between items-center">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" id="enableCustomInstructions" checked class="rounded text-indigo-600 focus:ring-indigo-500">
+                                <span class="text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-pen-ruler text-indigo-500 text-[10px]"></i> Custom System Instructions
+                                </span>
+                            </label>
+                            <button type="button" onclick="clearCustomInstructions()" class="text-[10px] text-rose-500 hover:text-rose-600 hover:underline">
+                                Clear
+                            </button>
+                        </div>
+                        <p class="text-[10px] text-slate-400 dark:text-slate-500">
+                            Persistent global writing rules injected into every AI prompt (tone, dialect, brevity, domain guidelines).
+                        </p>
+                        <textarea id="customInstructionsInput" rows="2"
+                            class="block w-full bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 rounded-lg py-2 px-3 leading-tight focus:outline-none focus:border-indigo-500 transition text-xs leading-relaxed resize-none font-medium"
+                            placeholder="e.g. Always use British English, keep tone concise, and avoid hyperbole."></textarea>
+                    </div>
+
+                    <!-- Instant Offline Utilities Toolbar Toggle -->
+                    <div class="p-3 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl flex items-center justify-between">
+                        <div class="flex flex-col gap-0.5 pr-3">
+                            <span class="text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                                <i class="fa-solid fa-bolt text-amber-500 text-[11px]"></i> Instant Offline Utilities Toolbar
+                            </span>
+                            <p class="text-[10px] text-slate-400 dark:text-slate-500">
+                                Show the Case Converters &amp; Arabic ⇄ English Keyboard Fixer bar on the workspace (0ms, no API key needed).
+                            </p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+                            <input type="checkbox" id="enableOfflineUtilities" checked onchange="toggleOfflineUtilities(this.checked, false)" class="sr-only peer">
+                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-slate-600 peer-checked:bg-indigo-600"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <hr class="border-slate-200 dark:border-slate-800/80">
+
                 <!-- History & Privacy Settings -->
                 <div class="flex flex-col gap-4">
                     <div
@@ -549,6 +703,26 @@
                         <input id="customRetentionInput" type="number" step="0.1" min="0.1" required
                             class="block w-full bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 rounded-xl py-2.5 px-3 leading-tight focus:outline-none focus:border-indigo-500 transition text-sm"
                             placeholder="e.g. 14 (decimals allowed, e.g. 0.5 = 12h)">
+                    </div>
+                </div>
+
+                <hr class="border-slate-200 dark:border-slate-800/80">
+
+                <!-- Built-in System Prompts & Actions Section -->
+                <div class="flex flex-col gap-3">
+                    <div class="flex justify-between items-center">
+                        <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Built-in System Prompts
+                        </div>
+                        <span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">Favorite appears first</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 dark:text-slate-500">
+                        Enable or disable individual system prompts from your workspace carousel. The Favorite Action (marked with a star) is placed first at the beginning of the carousel and cannot be disabled.
+                    </p>
+
+                    <!-- Built-in Prompts List -->
+                    <div id="builtInPromptsContainer" class="flex flex-col gap-2">
+                        <!-- Dynamically rendered by renderBuiltInPromptsList() -->
                     </div>
                 </div>
 
@@ -797,6 +971,121 @@
             }
         });
 
+        // --- Local Text Transformation & Keyboard Layout Conversion Engines (CodeSavvy Powered) ---
+        function convertTextString (text, type) {
+            switch (type) {
+                case 'sentenceCase': {
+                    const lower = text.toLowerCase();
+                    return lower.charAt(0).toUpperCase() + lower.slice(1);
+                }
+                case 'lowerCase':
+                    return text.toLowerCase();
+                case 'upperCase':
+                    return text.toUpperCase();
+                case 'capitalizedCase':
+                    return text.toLowerCase().split(' ')
+                        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                        .join(' ');
+                case 'alternatingCase':
+                    return text.split('')
+                        .map((char, i) => i % 2 === 0 ? char.toLowerCase() : char.toUpperCase())
+                        .join('');
+                case 'inverseCase':
+                    return text.split('')
+                        .map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase())
+                        .join('');
+                case 'titleCase':
+                    return text.toLowerCase().split(' ')
+                        .map((word, index) => {
+                            const smallWords = [ 'a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'nor', 'of', 'on', 'or', 'so', 'the', 'to', 'up', 'yet' ];
+                            if (index > 0 && smallWords.includes(word)) return word;
+                            return word.charAt(0).toUpperCase() + word.slice(1);
+                        })
+                        .join(' ');
+                case 'slugify':
+                    return text.toLowerCase()
+                        .replace(/[^\w\s-]/g, '')
+                        .replace(/\s+/g, '-')
+                        .replace(/-+/g, '-');
+                default:
+                    return text;
+            }
+        }
+
+        const englishToArabicMap = { '`': 'ذ', 'q': 'ض', 'w': 'ص', 'e': 'ث', 'r': 'ق', 't': 'ف', 'y': 'غ', 'u': 'ع', 'i': 'ه', 'o': 'خ', 'p': 'ح', '[': 'ج', ']': 'د', 'a': 'ش', 's': 'س', 'd': 'ي', 'f': 'ب', 'g': 'ل', 'h': 'ا', 'j': 'ت', 'k': 'ن', 'l': 'م', ';': 'ك', "'": 'ط', 'z': 'ئ', 'x': 'ء', 'c': 'ؤ', 'v': 'ر', 'b': 'لا', 'n': 'ى', 'm': 'ة', ',': 'و', '.': 'ز', '/': 'ظ' };
+        const arabicToEnglishMap = { 'ذ': '`', 'ض': 'q', 'ص': 'w', 'ث': 'e', 'ق': 'r', 'ف': 't', 'غ': 'y', 'ع': 'u', 'ه': 'i', 'خ': 'o', 'ح': 'p', 'ج': '[', 'د': ']', 'ش': 'a', 'س': 's', 'ي': 'd', 'ب': 'f', 'ل': 'g', 'ا': 'h', 'ت': 'j', 'ن': 'k', 'm': 'l', 'ك': ';', 'ط': "'", 'ئ': 'z', 'ء': 'x', 'ؤ': 'c', 'ر': 'v', 'لا': 'b', 'ى': 'n', 'ة': 'm', 'و': ',', 'ز': '.', 'ظ': '/' };
+
+        function convertKeyboard (text, dir) {
+            const map = dir === 'ar-to-en' ? arabicToEnglishMap : englishToArabicMap;
+            return text.split('').map(c => map[c] || c).join('');
+        }
+
+        function applyLocalTransform (type) {
+            const text = input.value;
+            if (!text.trim()) {
+                showToast("Please enter some text first!", true);
+                return;
+            }
+            const selectionStart = input.selectionStart;
+            const selectionEnd = input.selectionEnd;
+            let resultText = "";
+            let modeName = "";
+
+            if (selectionStart !== undefined && selectionStart !== selectionEnd) {
+                const before = text.substring(0, selectionStart);
+                const selected = text.substring(selectionStart, selectionEnd);
+                const after = text.substring(selectionEnd);
+                const converted = convertTextString(selected, type);
+                resultText = before + converted + after;
+                modeName = `${type} (Selection)`;
+            } else {
+                resultText = convertTextString(text, type);
+                modeName = type;
+            }
+
+            rawOutputText = resultText;
+            modeBadge.classList.remove('hidden');
+            modeBadge.textContent = `Util: ${modeName}`;
+            renderOutput();
+            saveHistoryEntry(`Text Util: ${modeName}`, text, resultText);
+            showToast(`Applied ${modeName}!`);
+            if (window.innerWidth < 768) {
+                switchTab('output');
+            }
+        }
+
+        function applyKeyboardFix (direction) {
+            const text = input.value;
+            if (!text.trim()) {
+                showToast("Please enter some text first!", true);
+                return;
+            }
+            const selectionStart = input.selectionStart;
+            const selectionEnd = input.selectionEnd;
+            let resultText = "";
+            const dirLabel = direction === 'ar-to-en' ? 'Arabic → English' : 'English → Arabic';
+
+            if (selectionStart !== undefined && selectionStart !== selectionEnd) {
+                const before = text.substring(0, selectionStart);
+                const selected = text.substring(selectionStart, selectionEnd);
+                const after = text.substring(selectionEnd);
+                const converted = convertKeyboard(selected, direction);
+                resultText = before + converted + after;
+            } else {
+                resultText = convertKeyboard(text, direction);
+            }
+
+            rawOutputText = resultText;
+            modeBadge.classList.remove('hidden');
+            modeBadge.textContent = `Fix: ${dirLabel}`;
+            renderOutput();
+            saveHistoryEntry(`Keyboard Fix: ${dirLabel}`, text, resultText);
+            showToast(`Converted ${dirLabel}!`);
+            if (window.innerWidth < 768) {
+                switchTab('output');
+            }
+        }
+
         // Toggle Output differences rendering
         function toggleDiff () {
             showDiff = !showDiff;
@@ -916,10 +1205,17 @@
                 "gemini-2.5-pro"
             ];
             const models = [ selectedModel, ...defaultModels.filter(m => m !== selectedModel) ];
+            const systemInstruction = getSystemInstruction();
 
             const payload = {
                 contents: [ { parts: [ { text: prompt } ] } ]
             };
+
+            if (systemInstruction) {
+                payload.systemInstruction = {
+                    parts: [ { text: systemInstruction } ]
+                };
+            }
 
             const sleep = (ms) => new Promise(res => setTimeout(res, ms));
 
@@ -985,18 +1281,124 @@
 
         // Built-in Presets Definition
         const defaultPresets = [
-            { id: 'improve', name: 'Correct & Polish', icon: 'fa-wand-magic-sparkles', class: 'bg-indigo-50 dark:bg-indigo-500/10 border-indigo-100 dark:border-indigo-500/20 text-indigo-600 dark:text-indigo-300 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-650' },
-            { id: 'professional', name: 'Professional', icon: 'fa-briefcase', class: 'bg-emerald-50 dark:bg-emerald-500/10 border-emerald-100 dark:border-emerald-500/20 text-emerald-600 dark:text-emerald-300 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-650' },
-            { id: 'casual', name: 'Conversational', icon: 'fa-comments', class: 'bg-sky-50 dark:bg-sky-500/10 border-sky-100 dark:border-sky-500/20 text-sky-600 dark:text-sky-300 hover:bg-sky-600 hover:text-white dark:hover:bg-sky-650' },
-            { id: 'summarize', name: 'Summarize', icon: 'fa-compress', class: 'bg-amber-50 dark:bg-amber-500/10 border-amber-100 dark:border-amber-500/20 text-amber-600 dark:text-amber-300 hover:bg-amber-600 hover:text-white dark:hover:bg-amber-650' },
-            { id: 'bullet', name: 'Bullet Points', icon: 'fa-list-ul', class: 'bg-purple-50 dark:bg-purple-500/10 border-purple-100 dark:border-purple-500/20 text-purple-600 dark:text-purple-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-650' },
-            { id: 'expand', name: 'Expand', icon: 'fa-expand', class: 'bg-cyan-50 dark:bg-cyan-500/10 border-cyan-100 dark:border-cyan-500/20 text-cyan-600 dark:text-cyan-300 hover:bg-cyan-600 hover:text-white dark:hover:bg-cyan-650' },
-            { id: 'sarcastic', name: 'Sarcastic', icon: 'fa-mask', class: 'bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20 text-rose-600 dark:text-rose-300 hover:bg-rose-600 hover:text-white dark:hover:bg-rose-650' },
-            { id: 'prompt', name: 'Prompt Architect', icon: 'fa-robot', class: 'bg-orange-50 dark:bg-orange-500/10 border-orange-100 dark:border-orange-500/20 text-orange-600 dark:text-orange-300 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-650' }
+            { id: 'improve', name: 'Correct & Polish', icon: 'fa-wand-magic-sparkles', desc: 'Fix grammar, typos, and phrasing flow while preserving your original intent.', class: 'bg-indigo-50 dark:bg-indigo-500/10 border-indigo-100 dark:border-indigo-500/20 text-indigo-600 dark:text-indigo-300 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-650' },
+            { id: 'advanced-improve', name: 'Advanced Edit', icon: 'fa-feather-pointed', desc: 'Comprehensive vocabulary, syntax, and flow overhaul for maximum clarity and eloquence.', class: 'bg-violet-50 dark:bg-violet-500/10 border-violet-100 dark:border-violet-500/20 text-violet-600 dark:text-violet-300 hover:bg-violet-600 hover:text-white dark:hover:bg-violet-650' },
+            { id: 'professional', name: 'Professional', icon: 'fa-briefcase', desc: 'Formalize text for business emails, executive reports, and formal correspondence.', class: 'bg-emerald-50 dark:bg-emerald-500/10 border-emerald-100 dark:border-emerald-500/20 text-emerald-600 dark:text-emerald-300 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-650' },
+            { id: 'casual', name: 'Conversational', icon: 'fa-comments', desc: 'Make writing warm, natural, and friendly for chat messages and informal notes.', class: 'bg-sky-50 dark:bg-sky-500/10 border-sky-100 dark:border-sky-500/20 text-sky-600 dark:text-sky-300 hover:bg-sky-600 hover:text-white dark:hover:bg-sky-650' },
+            { id: 'summarize', name: 'Summarize', icon: 'fa-compress', desc: 'Condense verbose text into clear, digestible key takeaways and conclusions.', class: 'bg-amber-50 dark:bg-amber-500/10 border-amber-100 dark:border-amber-500/20 text-amber-600 dark:text-amber-300 hover:bg-amber-600 hover:text-white dark:hover:bg-amber-650' },
+            { id: 'bullet', name: 'Bullet Points', icon: 'fa-list-ul', desc: 'Structure messy paragraphs into clean, scannable bullet points.', class: 'bg-purple-50 dark:bg-purple-500/10 border-purple-100 dark:border-purple-500/20 text-purple-600 dark:text-purple-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-650' },
+            { id: 'expand', name: 'Expand', icon: 'fa-expand', desc: 'Elaborate on thoughts with rich descriptions, examples, and depth.', class: 'bg-cyan-50 dark:bg-cyan-500/10 border-cyan-100 dark:border-cyan-500/20 text-cyan-600 dark:text-cyan-300 hover:bg-cyan-600 hover:text-white dark:hover:bg-cyan-650' },
+            { id: 'sarcastic', name: 'Sarcastic', icon: 'fa-mask', desc: 'Inject sharp wit, irony, and humorous cynicism into your text.', class: 'bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20 text-rose-600 dark:text-rose-300 hover:bg-rose-600 hover:text-white dark:hover:bg-rose-650' },
+            { id: 'prompt', name: 'Prompt Architect', icon: 'fa-robot', desc: 'Transform brief prompts into highly detailed, optimized system instructions for LLMs.', class: 'bg-orange-50 dark:bg-orange-500/10 border-orange-100 dark:border-orange-500/20 text-orange-600 dark:text-orange-300 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-650' }
         ];
 
         let customPresets = [];
         const STRICT_FORMATTING_SUFFIX = "\n\nCRITICAL INSTRUCTION: Return ONLY the processed result as plain text. Do NOT include any introductory greetings, commentary, labels, quotes, explanations, or markdown code block formatting (unless raw markdown is explicitly requested).";
+
+        function getEnabledAiActions () {
+            const saved = localStorage.getItem('cs_enabled_ai_actions');
+            const fav = getFavoriteAction();
+            let actions;
+            if (saved) {
+                try {
+                    actions = JSON.parse(saved);
+                    if (!Array.isArray(actions) || actions.length === 0) {
+                        actions = defaultPresets.map(p => p.id);
+                    }
+                } catch (e) {
+                    actions = defaultPresets.map(p => p.id);
+                }
+            } else {
+                actions = defaultPresets.map(p => p.id);
+            }
+            if (!actions.includes(fav)) {
+                actions.push(fav);
+            }
+            return actions;
+        }
+
+        function toggleAiAction (id, isEnabled) {
+            const fav = getFavoriteAction();
+            if (id === fav && !isEnabled) {
+                showToast("The favorite action cannot be disabled. Select another favorite first.", true);
+                renderBuiltInPromptsList();
+                return;
+            }
+            let enabledActions = getEnabledAiActions();
+            if (isEnabled) {
+                if (!enabledActions.includes(id)) {
+                    enabledActions.push(id);
+                }
+            } else {
+                enabledActions = enabledActions.filter(x => x !== id);
+            }
+            if (!enabledActions.includes(fav)) {
+                enabledActions.push(fav);
+            }
+            localStorage.setItem('cs_enabled_ai_actions', JSON.stringify(enabledActions));
+            renderBuiltInPromptsList();
+            renderPresetCarousel();
+            const actionObj = defaultPresets.find(p => p.id === id);
+            showToast(isEnabled ? `Enabled "${actionObj ? actionObj.name : id}"` : `Disabled "${actionObj ? actionObj.name : id}"`);
+        }
+
+        function setFavoritePrompt (id) {
+            localStorage.setItem('cs_favorite_action', id);
+            let enabledActions = getEnabledAiActions();
+            if (!enabledActions.includes(id)) {
+                enabledActions.push(id);
+                localStorage.setItem('cs_enabled_ai_actions', JSON.stringify(enabledActions));
+            }
+            renderBuiltInPromptsList();
+            renderPresetCarousel();
+            updateFavoriteActionLabel();
+            const match = defaultPresets.find(p => p.id === id) || customPresets.find(p => p.id === id);
+            showToast(`Set "${match ? match.name : id}" as favorite action ★`);
+        }
+
+        function renderBuiltInPromptsList () {
+            const container = document.getElementById('builtInPromptsContainer');
+            if (!container) return;
+
+            const fav = getFavoriteAction();
+            const enabledActions = getEnabledAiActions();
+
+            container.innerHTML = defaultPresets.map(action => {
+                const isFavorite = action.id === fav;
+                const isEnabled = enabledActions.includes(action.id) || isFavorite;
+
+                return `
+                <div class="p-2.5 sm:p-3 bg-slate-50 dark:bg-slate-900/60 border ${isFavorite ? 'border-amber-400/80 dark:border-amber-500/50 bg-amber-50/20 dark:bg-amber-500/5 ring-1 ring-amber-400/30' : 'border-slate-200 dark:border-slate-800'} rounded-xl flex items-center justify-between gap-2.5 transition-all">
+                    <div class="flex items-center gap-2.5 min-w-0">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${action.class}">
+                            <i class="fa-solid ${action.icon} text-xs"></i>
+                        </div>
+                        <div class="flex flex-col min-w-0">
+                            <div class="flex items-center gap-1.5 flex-wrap">
+                                <span class="text-xs font-bold text-slate-800 dark:text-slate-200">${escapeHtml(action.name)}</span>
+                                <span class="text-[9px] font-semibold bg-slate-200/80 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-1.5 py-0.5 rounded">System</span>
+                                ${isFavorite ? '<span class="text-[9px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 px-1.5 py-0.5 rounded border border-amber-300 dark:border-amber-500/30">★ Favorite</span>' : ''}
+                            </div>
+                            <span class="text-[10px] text-slate-400 dark:text-slate-500 truncate" title="${escapeHtml(action.desc)}">${escapeHtml(action.desc)}</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 flex-shrink-0">
+                        <button type="button" onclick="setFavoritePrompt('${action.id}')"
+                            title="${isFavorite ? 'Current Favorite Action' : 'Set as Favorite Action'}"
+                            class="px-2 py-1 text-xs rounded-lg font-medium transition flex items-center gap-1 ${isFavorite ? 'bg-amber-100 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 font-bold border border-amber-300 dark:border-amber-500/30 cursor-default' : 'bg-slate-200/70 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300'}">
+                            <i class="${isFavorite ? 'fa-solid' : 'fa-regular'} fa-star text-[10px] ${isFavorite ? 'text-amber-500' : ''}"></i>
+                            <span class="hidden sm:inline text-[10px]">${isFavorite ? 'Favorite' : 'Make Fav'}</span>
+                        </button>
+                        <label class="relative inline-flex items-center ${isFavorite ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'}"
+                            title="${isFavorite ? 'The favorite action cannot be disabled. Select another favorite first.' : (isEnabled ? 'Disable this system prompt' : 'Enable this system prompt')}">
+                            <input type="checkbox" onchange="toggleAiAction('${action.id}', this.checked)" ${isEnabled ? 'checked' : ''} ${isFavorite ? 'disabled' : ''} class="sr-only peer">
+                            <div class="w-8 h-4 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-slate-600 peer-checked:bg-indigo-600"></div>
+                        </label>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
 
         function loadCustomPresets () {
             const saved = localStorage.getItem('cs_custom_presets');
@@ -1009,6 +1411,7 @@
             } else {
                 customPresets = [];
             }
+            renderBuiltInPromptsList();
             renderPresetCarousel();
             renderCustomPresetsList();
             setupCarouselScroll();
@@ -1227,22 +1630,50 @@
             const container = document.getElementById('tonePresetsCarousel');
             if (!container) return;
 
-            const builtInHtml = defaultPresets.map(preset => `
-                <button onclick="triggerAI('${preset.id}')" title="${escapeHtml(preset.name)}: Built-in transformation"
+            const fav = getFavoriteAction();
+            const enabledActions = getEnabledAiActions();
+
+            // Filter built-in presets by enabledActions (favorite is always kept enabled)
+            const activeBuiltIns = defaultPresets.filter(p => enabledActions.includes(p.id) || p.id === fav);
+
+            // Combine active built-in presets and custom presets
+            let allActivePresets = [ ...activeBuiltIns, ...customPresets ];
+
+            // Position the favorite action at index 0 (at the very beginning)
+            const favIndex = allActivePresets.findIndex(p => p.id === fav);
+            if (favIndex > 0) {
+                const favPreset = allActivePresets.splice(favIndex, 1)[ 0 ];
+                allActivePresets.unshift(favPreset);
+            }
+
+            if (allActivePresets.length === 0) {
+                container.innerHTML = `
+                    <div class="px-3 py-2 text-xs text-slate-400 italic">
+                        No presets enabled. Open Settings to enable system prompts.
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = allActivePresets.map(preset => {
+                const isFav = preset.id === fav;
+                const isCustom = Boolean(preset.isCustom);
+                if (isCustom) {
+                    return `
+                    <button onclick="triggerAI('${preset.id}')" title="Custom Preset: ${escapeHtml(preset.prompt)}${isFav ? ' (Favorite Action ★)' : ''}"
+                        class="snap-start flex-shrink-0 flex items-center gap-2 px-4 py-2.5 bg-fuchsia-50 dark:bg-fuchsia-500/10 border border-fuchsia-200 dark:border-fuchsia-500/30 text-fuchsia-600 dark:text-fuchsia-300 hover:bg-fuchsia-600 hover:text-white rounded-xl transition text-xs font-semibold shadow-sm active:scale-95 duration-75 group">
+                        <i class="fa-solid fa-sliders text-fuchsia-500 dark:text-fuchsia-400 group-hover:text-white"></i> ${escapeHtml(preset.name)}${isFav ? '<span class="text-amber-400 font-bold ml-1 text-xs">★</span>' : ''}
+                        <span class="text-[9px] bg-fuchsia-200 dark:bg-fuchsia-900/60 text-fuchsia-800 dark:text-fuchsia-200 group-hover:bg-white/20 group-hover:text-white px-1.5 py-0.5 rounded font-mono uppercase tracking-wider">Custom</span>
+                    </button>
+                    `;
+                }
+                return `
+                <button onclick="triggerAI('${preset.id}')" title="${escapeHtml(preset.name)}${isFav ? ' (Favorite Action ★)' : ': Built-in transformation'}"
                     class="snap-start flex-shrink-0 flex items-center gap-2 px-4 py-2.5 ${preset.class} rounded-xl transition text-xs font-semibold shadow-sm active:scale-95 duration-75">
-                    <i class="fa-solid ${preset.icon}"></i> ${escapeHtml(preset.name)}
+                    <i class="fa-solid ${preset.icon}"></i> ${escapeHtml(preset.name)}${isFav ? '<span class="text-amber-400 font-bold ml-1 text-xs">★</span>' : ''}
                 </button>
-            `).join('');
-
-            const customHtml = customPresets.map(preset => `
-                <button onclick="triggerAI('${preset.id}')" title="Custom Preset: ${escapeHtml(preset.prompt)}"
-                    class="snap-start flex-shrink-0 flex items-center gap-2 px-4 py-2.5 bg-fuchsia-50 dark:bg-fuchsia-500/10 border border-fuchsia-200 dark:border-fuchsia-500/30 text-fuchsia-600 dark:text-fuchsia-300 hover:bg-fuchsia-600 hover:text-white rounded-xl transition text-xs font-semibold shadow-sm active:scale-95 duration-75 group">
-                    <i class="fa-solid fa-sliders text-fuchsia-500 dark:text-fuchsia-400 group-hover:text-white"></i> ${escapeHtml(preset.name)}
-                    <span class="text-[9px] bg-fuchsia-200 dark:bg-fuchsia-900/60 text-fuchsia-800 dark:text-fuchsia-200 group-hover:bg-white/20 group-hover:text-white px-1.5 py-0.5 rounded font-mono uppercase tracking-wider">Custom</span>
-                </button>
-            `).join('');
-
-            container.innerHTML = builtInHtml + customHtml;
+                `;
+            }).join('');
         }
 
         function renderCustomPresetsList () {
@@ -1302,6 +1733,8 @@
             switch (mode) {
                 case 'improve':
                     return `Correct spelling, typos, and improve the general grammar of the following text.${STRICT_FORMATTING_SUFFIX}\n\nText: "${text}"`;
+                case 'advanced-improve':
+                    return `Perform an advanced, comprehensive editorial review of the following text. Enhance vocabulary, syntax, clarity, and logical flow while retaining the core message.${STRICT_FORMATTING_SUFFIX}\n\nText: "${text}"`;
                 case 'professional':
                     return `Rewrite the following text to sound highly professional, formal, persuasive, and authoritative.${STRICT_FORMATTING_SUFFIX}\n\nText: "${text}"`;
                 case 'casual':
@@ -1597,6 +2030,153 @@
             backdrop.classList.toggle('pointer-events-none');
         }
 
+        // --- AI Personalization & Guardrails Engine (CodeSavvy Powered) ---
+        let workingProtectedTerms = [];
+
+        function loadProtectedTerms () {
+            const enabled = localStorage.getItem('cs_enable_protected_terms') !== 'false';
+            const enableEl = document.getElementById('enableProtectedTerms');
+            if (enableEl) enableEl.checked = enabled;
+
+            try {
+                workingProtectedTerms = JSON.parse(localStorage.getItem('cs_protected_terms') || '[]');
+                if (!Array.isArray(workingProtectedTerms)) workingProtectedTerms = [];
+            } catch (e) {
+                workingProtectedTerms = [];
+            }
+            renderProtectedTerms();
+        }
+
+        function renderProtectedTerms () {
+            const container = document.getElementById('protectedTermsChips');
+            if (!container) return;
+            if (workingProtectedTerms.length === 0) {
+                container.innerHTML = `<span class="text-[10px] text-slate-400 italic px-2 py-1">No protected terms added yet.</span>`;
+                return;
+            }
+            container.innerHTML = workingProtectedTerms.map((term, index) => `
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200 dark:border-indigo-500/30 text-indigo-700 dark:text-indigo-300 text-xs font-mono font-medium">
+                    ${escapeHtml(term)}
+                    <button type="button" onclick="removeProtectedTerm(${index})" class="text-indigo-400 hover:text-rose-500 text-[10px] transition" title="Remove term">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </span>
+            `).join('');
+        }
+
+        function addProtectedTerm () {
+            const inputEl = document.getElementById('newProtectedTermInput');
+            if (!inputEl) return;
+            const val = inputEl.value.trim();
+            if (!val) return;
+            const terms = val.split(',').map(t => t.trim()).filter(Boolean);
+            terms.forEach(term => {
+                if (!workingProtectedTerms.includes(term)) {
+                    workingProtectedTerms.push(term);
+                }
+            });
+            inputEl.value = '';
+            renderProtectedTerms();
+            showToast(`Added protected term${terms.length > 1 ? 's' : ''}`);
+        }
+
+        function removeProtectedTerm (index) {
+            workingProtectedTerms.splice(index, 1);
+            renderProtectedTerms();
+        }
+
+        function clearProtectedTerms () {
+            workingProtectedTerms = [];
+            renderProtectedTerms();
+            showToast("Cleared all protected terms");
+        }
+
+        function loadCustomInstructions () {
+            const enabled = localStorage.getItem('cs_enable_custom_instructions') !== 'false';
+            const enableEl = document.getElementById('enableCustomInstructions');
+            if (enableEl) enableEl.checked = enabled;
+
+            const instInput = document.getElementById('customInstructionsInput');
+            if (instInput) {
+                instInput.value = localStorage.getItem('cs_custom_instructions') || '';
+            }
+        }
+
+        function clearCustomInstructions () {
+            const instInput = document.getElementById('customInstructionsInput');
+            if (instInput) instInput.value = '';
+            showToast("Cleared custom instructions");
+        }
+
+        function getFavoriteAction () {
+            return localStorage.getItem('cs_favorite_action') || 'improve';
+        }
+
+        function updateFavoriteActionLabel () {
+            const favLabel = document.getElementById('favoriteActionLabel');
+            if (!favLabel) return;
+            const fav = getFavoriteAction();
+            const match = defaultPresets.find(p => p.id === fav) || customPresets.find(p => p.id === fav);
+            favLabel.textContent = `${match ? match.name : 'Correct & Polish'} ★`;
+        }
+
+        function getSystemInstruction () {
+            const parts = [
+                "You are a specialized text editor and writing assistant. Return ONLY the processed plain text without conversational preamble, conversational remarks, commentary, explanations, or quotes."
+            ];
+
+            const enableProtected = localStorage.getItem('cs_enable_protected_terms') !== 'false';
+            let protectedTerms = [];
+            try {
+                protectedTerms = JSON.parse(localStorage.getItem('cs_protected_terms') || '[]');
+                if (!Array.isArray(protectedTerms)) protectedTerms = [];
+            } catch (e) {
+                protectedTerms = [];
+            }
+            if (enableProtected && protectedTerms.length > 0) {
+                const termsList = protectedTerms
+                    .map(t => (typeof t === 'string' ? t.trim() : ''))
+                    .filter(Boolean)
+                    .map(t => `- ${t}`)
+                    .join('\n');
+                if (termsList) {
+                    parts.push(
+                        `PROTECTED TERMS (DO NOT MODIFY):\nThe following terms, names, and version numbers are verified correct entities. You MUST keep them exactly as written and NEVER change, autocorrect, rephrase, or substitute them:\n${termsList}`
+                    );
+                }
+            }
+
+            const enableCustom = localStorage.getItem('cs_enable_custom_instructions') !== 'false';
+            const customInst = localStorage.getItem('cs_custom_instructions') || '';
+            if (enableCustom && customInst.trim()) {
+                parts.push(
+                    `USER CUSTOM INSTRUCTIONS:\n${customInst.trim()}`
+                );
+            }
+
+            return parts.join('\n\n');
+        }
+
+        function toggleOfflineUtilities (enable, notify = false) {
+            const isEnabled = Boolean(enable);
+            const section = document.getElementById('offlineUtilitiesSection');
+            const checkbox = document.getElementById('enableOfflineUtilities');
+            if (checkbox) {
+                checkbox.checked = isEnabled;
+            }
+            if (section) {
+                if (isEnabled) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            }
+            localStorage.setItem('cs_enable_offline_utilities', isEnabled ? 'true' : 'false');
+            if (notify) {
+                showToast(isEnabled ? "Offline utilities toolbar enabled" : "Offline utilities toolbar hidden. You can re-enable it in Settings.");
+            }
+        }
+
         // Settings Dialog Management
         function loadSettings () {
             const geminiKey = localStorage.getItem('cs_gemini_key') || '';
@@ -1610,6 +2190,14 @@
             historyModeSelect.value = historyMode;
             historyRetentionSelect.value = historyRetention;
             customRetentionInput.value = customDays;
+
+            loadProtectedTerms();
+            loadCustomInstructions();
+            renderBuiltInPromptsList();
+            renderPresetCarousel();
+
+            const enableOffline = localStorage.getItem('cs_enable_offline_utilities') !== 'false';
+            toggleOfflineUtilities(enableOffline, false);
 
             toggleCustomRetention(historyRetention);
             updateProviderLabel();
@@ -1643,6 +2231,30 @@
             localStorage.setItem('cs_history_retention', historyRetention);
             localStorage.setItem('cs_custom_retention_days', customDays);
 
+            const enableProtected = document.getElementById('enableProtectedTerms')?.checked ?? true;
+            const enableCustom = document.getElementById('enableCustomInstructions')?.checked ?? true;
+            const customInst = document.getElementById('customInstructionsInput')?.value || '';
+            const favAction = getFavoriteAction();
+            const enableOffline = document.getElementById('enableOfflineUtilities')?.checked ?? true;
+
+            localStorage.setItem('cs_enable_protected_terms', enableProtected ? 'true' : 'false');
+            localStorage.setItem('cs_protected_terms', JSON.stringify(workingProtectedTerms));
+            localStorage.setItem('cs_enable_custom_instructions', enableCustom ? 'true' : 'false');
+            localStorage.setItem('cs_custom_instructions', customInst);
+            localStorage.setItem('cs_favorite_action', favAction);
+
+            let enabledActions = getEnabledAiActions();
+            if (!enabledActions.includes(favAction)) {
+                enabledActions.push(favAction);
+                localStorage.setItem('cs_enabled_ai_actions', JSON.stringify(enabledActions));
+            }
+
+            toggleOfflineUtilities(enableOffline, false);
+
+            renderBuiltInPromptsList();
+            renderPresetCarousel();
+            updateFavoriteActionLabel();
+
             btnApply.disabled = true;
             btnApply.innerHTML = `<i class="fa-solid fa-check"></i> Settings Applied!`;
             btnApply.classList.replace('bg-indigo-600', 'bg-emerald-600');
@@ -1670,6 +2282,13 @@
                 historyMode: localStorage.getItem('cs_history_mode') || 'enabled',
                 historyRetention: localStorage.getItem('cs_history_retention') || 'never',
                 customRetentionDays: localStorage.getItem('cs_custom_retention_days') || '',
+                enableProtectedTerms: localStorage.getItem('cs_enable_protected_terms') !== 'false',
+                protectedTerms: workingProtectedTerms,
+                enableCustomInstructions: localStorage.getItem('cs_enable_custom_instructions') !== 'false',
+                customInstructions: localStorage.getItem('cs_custom_instructions') || '',
+                enableOfflineUtilities: localStorage.getItem('cs_enable_offline_utilities') !== 'false',
+                favoriteAction: getFavoriteAction(),
+                enabledAiActions: getEnabledAiActions(),
                 customPresets: customPresets
             };
 
@@ -1703,6 +2322,19 @@
                     if (settings.historyMode) localStorage.setItem('cs_history_mode', settings.historyMode);
                     if (settings.historyRetention) localStorage.setItem('cs_history_retention', settings.historyRetention);
                     if (settings.customRetentionDays !== undefined) localStorage.setItem('cs_custom_retention_days', settings.customRetentionDays);
+
+                    if (settings.enableProtectedTerms !== undefined) localStorage.setItem('cs_enable_protected_terms', settings.enableProtectedTerms ? 'true' : 'false');
+                    if (Array.isArray(settings.protectedTerms)) {
+                        workingProtectedTerms = settings.protectedTerms.filter(t => typeof t === 'string' && t.trim());
+                        localStorage.setItem('cs_protected_terms', JSON.stringify(workingProtectedTerms));
+                    }
+                    if (settings.enableCustomInstructions !== undefined) localStorage.setItem('cs_enable_custom_instructions', settings.enableCustomInstructions ? 'true' : 'false');
+                    if (typeof settings.customInstructions === 'string') localStorage.setItem('cs_custom_instructions', settings.customInstructions);
+                    if (settings.enableOfflineUtilities !== undefined) localStorage.setItem('cs_enable_offline_utilities', settings.enableOfflineUtilities ? 'true' : 'false');
+                    if (settings.favoriteAction) localStorage.setItem('cs_favorite_action', settings.favoriteAction);
+                    if (Array.isArray(settings.enabledAiActions) && settings.enabledAiActions.length > 0) {
+                        localStorage.setItem('cs_enabled_ai_actions', JSON.stringify(settings.enabledAiActions));
+                    }
 
                     if (Array.isArray(settings.customPresets)) {
                         customPresets = settings.customPresets.filter(p => p && typeof p.name === 'string' && typeof p.prompt === 'string').map(p => ({
@@ -1740,6 +2372,15 @@
             localStorage.setItem('cs_history_mode', 'enabled');
             localStorage.setItem('cs_history_retention', 'never');
             localStorage.setItem('cs_custom_retention_days', '');
+            workingProtectedTerms = [];
+            localStorage.removeItem('cs_protected_terms');
+            localStorage.setItem('cs_enable_protected_terms', 'true');
+            localStorage.removeItem('cs_custom_instructions');
+            localStorage.setItem('cs_enable_custom_instructions', 'true');
+            localStorage.setItem('cs_enable_offline_utilities', 'true');
+            localStorage.setItem('cs_favorite_action', 'improve');
+            localStorage.removeItem('cs_enabled_ai_actions');
+
             customPresets = [];
             saveCustomPresets();
 
@@ -1805,6 +2446,13 @@
         }
 
         setupVisibilityToggle('apiKeyInput', 'toggleGeminiKey');
+
+        document.getElementById('newProtectedTermInput')?.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                addProtectedTerm();
+            }
+        });
 
         testBtn.addEventListener('click', async () => {
             const key = apiKeyInput.value.trim() || localStorage.getItem('cs_gemini_key');
