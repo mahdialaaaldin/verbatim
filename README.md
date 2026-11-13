@@ -1,8 +1,8 @@
 <div align="center">
   <img src="favicon.svg" alt="Verbatim Studio Logo" width="120" height="120" />
-  
+
   # Verbatim Studio
-  
+
   ### *The Premium AI-Powered Text Transformation Suite*
 
   [![GitHub License](https://img.shields.io/github/license/mahdialaaaldin/verbatim?style=for-the-badge&color=6366f1)](https://github.com/mahdialaaaldin/verbatim/blob/main/LICENSE)
@@ -10,7 +10,7 @@
   [![Demo](https://img.shields.io/badge/Live-Demo-3b82f6?style=for-the-badge)](https://mahdialaaaldin.github.io/verbatim/)
 
   <p align="center">
-    <strong>Verbatim Studio</strong> is a state-of-the-art, client-side web editor engineered for lightning-fast text revisions, tone adjustments, grammar optimization, and AI prompting. Designed with mobile-first responsiveness, it serves as a robust writing assistant that runs completely in your browser, based on the <a href="https://chromewebstore.google.com/detail/codesavvy/jenendhnlcnokliclhccikgeohdgfhml"><strong>CodeSavvy Chrome Extension</strong></a>.
+    <strong>Verbatim Studio</strong> is a fast, client-side AI writing studio for rewriting, grammar fixes, tone changes, translation, and voice dictation. It runs entirely in your browser, works great on phones and laptops, and is based on the <a href="https://chromewebstore.google.com/detail/codesavvy/jenendhnlcnokliclhccikgeohdgfhml"><strong>CodeSavvy Chrome Extension</strong></a>.
   </p>
 </div>
 
@@ -24,39 +24,94 @@
 
 ---
 
+## 🆕 What's New in v2
+
+* ⚡ **Live streaming output** : watch the result appear as Gemini writes it, and stop it anytime with **Stop** or `Esc`.
+* 🎙️ **Voice dictation** : speak instead of typing, including Arabic (Lebanon, Saudi Arabia, Egypt), English, French, Spanish, and German.
+* ✂️ **Edit just a selection** : highlight part of your text and any action (AI or offline) changes only that part.
+* 🔗 **Chain actions** : **Use as input** sends the result back to the editor so you can run another action on it. **Regenerate** reruns the last one.
+* 🔎 **Command palette** : press `Ctrl/⌘ + K` to search every action and command.
+* 🌍 **New presets** : Make Concise, Simplify, Email Draft, Translate → English, and Translate → Arabic.
+* 🧹 **New offline tools** : clean spaces, fix broken line breaks (great for PDF text), sort lines, remove duplicate lines, and remove Arabic diacritics (تشكيل).
+* 🤖 **Smarter model handling** : Flash Lite (latest) by default, a "Load my models" button, and automatic fallback when a model is busy or out of quota.
+* 📱 **Rebuilt mobile experience** : a bottom action bar within thumb reach, a bottom-sheet Settings panel, notch-safe layout, and no zoom-on-tap on iPhone.
+* ↩️ **Undo everywhere** : clearing text, pasting, deleting history, and removing presets can all be undone from the notification.
+* 🛡️ **Many bug fixes** : including the Arabic keyboard fixer, Copy with Diff on, the mobile/desktop layout switch, and safer settings import.
+
+---
+
 ## ✨ Features at a Glance
 
-### 🧠 Advanced AI & Personalization Guardrails
-Powered by **Google Gemini AI** (via Gemini API) with robust guardrails:
-* 🔒 **Protected Terms Dictionary**: Blacklist critical brand names, code parameters, or version tags that Gemini is strictly forbidden from altering, translating, or hallucinating over.
-* ✍️ **Custom System Instructions**: Inject persistent global directives (e.g., British vs. American English, concise bullets, domain-specific rules) into all AI operations.
-* ⭐ **Customizable Favorite Action (`★`)**: Designate any built-in system prompt as your favorite using the star button in Settings to automatically pin it at the very beginning of your workspace carousel.
+### 🧠 AI Actions (Google Gemini)
+* ✨ **Correct & Polish** : fix grammar, typos, and flow while keeping your voice.
+* 🖋️ **Advanced Edit** : a full vocabulary, syntax, and flow overhaul.
+* 💼 **Professional** : formal wording for business emails and reports.
+* 💬 **Conversational** : warm, natural wording for chats and notes.
+* ✂️ **Make Concise** : cut filler while keeping every key point.
+* 💡 **Simplify** : plain language with short sentences.
+* 🗜️ **Summarize** : the core message in 1–2 sentences.
+* 📊 **Bullet Points** : turn paragraphs into a scannable list.
+* 📐 **Expand** : add detail and depth to brief notes.
+* ✉️ **Email Draft** : turn rough notes into a ready-to-send email with a subject line.
+* 🌐 **Translate → English / Translate → Arabic** : natural, fluent translation.
+* 🎭 **Sarcastic** : dry humor and wit.
+* 🤖 **Prompt Architect** : turn a basic idea into a structured prompt for AI models.
 
-### ⚡ Instant Offline Utilities & Keyboard Fixer (0ms • No Key Needed)
-Perform instant client-side transforms completely offline (can be toggled on/off in Settings or dismissed directly via the toolbar `✕` button):
-* 🔤 **Case Converters**: Sentence case, lower case, UPPER CASE, Capitalized Case, Title Case, `slug-format`, `aLtErNaTiNg`, and `iNVERSE`.
-* 🌐 **Arabic ⇄ English Keyboard Layout Fixer**: Instantly recover text typed with the wrong keyboard layout (e.g., `ؤاشف` ⇄ `chat`, `login` ⇄ `مخلهى`).
+Every action replies in the same language as your text unless it's a translation. Your text is treated as content to edit, so Gemini won't try to *answer* questions inside it.
 
-### 🎭 Tone Presets & Built-in System Prompts
-Instant transformations with tailor-made prompt structures:
-* ✨ **Correct & Polish (`improve`)**: Fix grammar, flow, and phrasing.
-* 🖋️ **Advanced Edit (`advanced-improve`)**: Comprehensive vocabulary, syntax, and flow overhaul.
-* 💼 **Professional (`professional`)**: Formalize text for corporate, research, or email correspondence.
-* 💬 **Conversational (`casual`)**: Turn dry drafts into friendly, approachable messages.
-* 🗜️ **Summarize (`summarize`)**: Compress long paragraphs into core takeaways.
-* 📊 **Bullet Points (`bullet`)**: Convert blocks of text into structured, readable lists.
-* 📐 **Expand (`expand`)**: Elaborate on brief points to write complete ideas.
-* 🎭 **Sarcastic (`sarcastic`)**: Rewrite text with dry humor and wit.
-* 🤖 **Prompt Architect (`prompt`)**: Turn basic ideas into optimized LLM system prompts.
-* 🎛️ **Granular Prompt Control**: Enable or disable individual system prompts in Settings (or leave just a single one enabled). The designated Favorite Action (`★`) is always pinned at the beginning of the carousel and protected from deactivation.
+### 🎛️ Personalization & Guardrails
+* ⭐ **Favorite action (★)** : pin any built-in **or custom** preset to the front, and run it with `Ctrl/⌘ + Enter`.
+* 🧩 **Custom presets** : write your own prompts, then reorder, edit, or delete them.
+* 👁️ **Show/hide built-in actions** : keep the action bar short (your favorite can't be hidden).
+* 🔒 **Protected Terms Dictionary** : brand names and terms Gemini must never change or translate.
+* ✍️ **Custom System Instructions** : global rules added to every request (e.g. "Always use British English").
 
-### 🎨 Visual & UI Excellence
-* 🌓 **Adaptive Dark Mode**: Switch between a clean slate interface and a dark space aura.
-* 🔍 **Real-Time Diff Viewer**: Interactively compare original and AI-modified texts with clear word-level insertions and deletions.
-* 🎙️ **Text-to-Speech Output**: Read back rewritten text using native browser-based speech synthesis audio controls.
-* 📜 **Revision History Ledger**: Automatically save previous transformations with custom auto-delete retention and Incognito mode. Restore, copy, or delete drafts in one click.
-* 💾 **Settings Backup & Portability**: Export preferences and custom presets to JSON, restore backups, or reset to factory defaults.
-* 📱 **PWA & Mobile Optimization**: Configured as an iOS Web App with custom apple-touch icons and status-bar colors for a native app feel when added to the home screen.
+### ⚡ Offline Utilities (0ms • No API Key Needed)
+* 🔤 **Case converters** : Sentence case, lower case, UPPER CASE, Capitalized Case, Title Case, `slug-format`, `aLtErNaTiNg`, `iNVERSE`.
+* 🧹 **Cleanup tools** : clean spaces, fix line breaks, sort lines, dedupe lines, remove تشكيل.
+* ⌨️ **Arabic ⇄ English keyboard fixer** : recover text typed on the wrong layout (`ؤاشف` ⇄ `chat`, `login` ⇄ `مخلهى`). It handles أ / إ / آ / لا, Caps Lock, and Arabic-Indic digits.
+
+### 🔍 Working With Results
+* 🟢🔴 **Word-level diff** : see exactly what changed.
+* 🔊 **Read aloud** : text-to-speech for long text, with an Arabic voice for Arabic.
+* 📋 **Copy, share, or download** the result as `.txt`.
+* 🟡 **"Input edited" alert** : shows when the result no longer matches your current text, with one-tap regenerate.
+
+### 📜 History & Privacy
+* 🗂️ **Revision history** : search, restore, copy, delete, and export as JSON.
+* 🕶️ **Incognito mode** : pause history and draft saving with one tap.
+* ⏳ **Auto-delete** : after 1 day, 3 days, 1 week, 1 month, or a custom duration.
+* 💾 **Draft autosave** : your text survives a page reload (optional, paused in Incognito).
+* 🗃️ **Backup & restore** : export or import settings and presets as JSON (your API key is never included).
+
+### 🎨 Design & Experience
+* 🌓 Light and dark themes that follow your system setting.
+* 🔤 Mixed Arabic/English text: each paragraph gets the right direction automatically.
+* 📱 Mobile bottom action bar, swipe-friendly preset bars, and installable as an app.
+* ⌨️ Full keyboard shortcuts and a command palette on desktop.
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action |
+| --- | --- |
+| `Ctrl/⌘ + Enter` | Run your ★ favorite action |
+| `Ctrl/⌘ + Shift + Enter` | Use the result as input |
+| `Ctrl/⌘ + K` | Open the command palette |
+| `Alt + 1–9` | Run an AI action by its position |
+| `Esc` | Stop generating / close panels |
+
+> 💡 **Tip:** Select part of your text first, and any action applies to that selection only.
+
+---
+
+## 🤖 Choosing a Model
+
+* ⭐ **Flash Lite (latest)** is the default and the recommendation. It's fast, low cost, uses the fewest tokens, and automatically points to Google's newest Flash Lite model.
+* **Flash** models are smarter but slower and use more tokens. **Pro** models are the slowest and most expensive.
+* **Load my models** lists the models your API key can use. It automatically hides models that can't edit text (image, audio, embedding, and similar). After choosing a new model, press **Test connection**.
+* **Auto-fallback:** if your model is busy or out of quota, Verbatim tries other Flash Lite models first, then regular Flash as a last resort.
 
 ---
 
@@ -64,59 +119,66 @@ Instant transformations with tailor-made prompt structures:
 
 ```mermaid
 graph TD
-    A[Input Original Text] --> B[Select Tone Preset]
-    B --> C[Secure LocalStorage Gemini Key]
-    C --> D[Direct Client-to-API Request]
-    D --> E[Generate & Mirror Output]
-    E --> F[Features: Diff, Text-to-Speech, Copy]
-    E --> G[Saved to Revision History]
+    A[Type, paste, or dictate text] --> B{Choose an action}
+    B -->|AI action| C[Prompt + your guardrails]
+    C --> D[Gemini API, called directly from your browser]
+    D -->|streams back| E[Result]
+    D -.->|busy or out of quota| F[Fallback model] --> E
+    B -->|Offline utility| G[Instant local transform] --> E
+    E --> H[Diff · Read aloud · Copy · Share · Download]
+    E --> I[Use as input to chain another action]
+    E --> J[Saved to history, unless Incognito]
 ```
 
 ---
 
-## 🔐 API Key Setup & Security
+## 🔐 API Key Setup & Privacy
 
-Verbatim Studio works entirely on the client side. **Your API keys are never sent to external third-party servers**—they are saved directly inside your browser's secure `LocalStorage` and sent only to the official Google Gemini API.
+Verbatim Studio runs entirely in your browser. There's no Verbatim server. Your API key is stored only in this browser's `localStorage`, and it's sent only to Google's official Gemini API.
 
-### Setup Instructions:
-1. Obtain a key from the [Google AI Studio API Key Portal](https://aistudio.google.com/app/apikey).
-2. Click the gear icon (**API Settings**) in Verbatim Studio.
-3. Paste your Gemini API key and save.
+### Setup
+1. Get a free key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+2. Open **Settings** (the gear icon) in Verbatim Studio.
+3. Paste your key. It saves automatically, and you can press **Test connection** to check it.
+
+> 🛡️ **Tip:** Use a dedicated API key for Verbatim, and don't save your key on shared or public computers.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Structure & UI**: HTML5 & [Tailwind CSS](https://tailwindcss.com) (via CDN config)
-* **Fonts & Icons**: Outfit & Inter (Google Fonts), Font Awesome 6
-* **AI Connection**: Native Fetch API (Google Gemini API)
-* **Diff Engine**: Text comparison diff highlights (`<ins>` / `<del>`)
+* **UI:** HTML5 + [Tailwind CSS](https://tailwindcss.com) (CDN)
+* **Fonts & icons:** Inter, Outfit, Noto Sans Arabic (Google Fonts), Font Awesome 6
+* **AI:** Google Gemini API through native `fetch`, with streaming (SSE)
+* **Voice:** Web Speech API (speech recognition for dictation, speech synthesis for read-aloud)
+* **Diff:** a custom word-level diff engine (`<ins>` / `<del>`)
+* **Storage:** `localStorage` only, with no backend
+
+> Voice dictation needs a browser that supports speech recognition, such as Chrome, Edge, or Safari.
 
 ---
 
 ## 📲 Installing as a Mobile App (PWA)
 
-Verbatim Studio is fully optimized to run standalone on your smartphone:
-
 ### iOS (Safari)
 1. Open the [Live Demo](https://mahdialaaaldin.github.io/verbatim/) in Safari.
-2. Tap the **Share** button in the navigation bar.
-3. Scroll down and select **Add to Home Screen**.
-4. Launch the app directly from your home screen for a borderless, full-screen native experience.
+2. Tap the **Share** button.
+3. Choose **Add to Home Screen**.
+4. Launch it from your home screen for a full-screen, app-like experience.
 
 ### Android (Chrome)
 1. Open the [Live Demo](https://mahdialaaaldin.github.io/verbatim/) in Chrome.
 2. Tap the **three-dot menu** in the top right.
-3. Select **Install app** or **Add to Home screen**.
+3. Choose **Install app** or **Add to Home screen**.
 
 ---
 
 ## 📌 Related Projects
 
-* **[CodeSavvy (Browser Extension)](https://chromewebstore.google.com/detail/codesavvy/jenendhnlcnokliclhccikgeohdgfhml)** – The original AI-powered writing assistant extension for your web browser.
+* **[CodeSavvy (Browser Extension)](https://chromewebstore.google.com/detail/codesavvy/jenendhnlcnokliclhccikgeohdgfhml)** – the original AI writing assistant extension for your browser.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
